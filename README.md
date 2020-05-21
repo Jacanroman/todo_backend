@@ -21,3 +21,58 @@ This project uses the following technology:
 
 The API exposes the following endpoints:
 
+---
+
+### Endpoints
+
+The API exposes the following endpoints:
+
+---
+
+##### GET /products
+
+[https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks](https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks)
+
+Responds with JSON containing all tasks in the Database.
+
+---
+
+##### POST /products
+
+[https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks](https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks)
+
+Will create a new product when sent a JSON payload in the format:
+
+```json
+{
+  	"Description": "Wash the dog",
+	"DueDate": "2020-05-05",
+	"Completed": false,
+	"User_Id": 3
+}
+```
+
+---
+
+##### DELETE /products/:item_id
+
+[https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks/](https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks/)
+
+Deletes the task of the given ID.
+
+---
+
+##### PUT /products/:item_id
+
+[https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks/](https://b60xl2jgd9.execute-api.eu-west-1.amazonaws.com/dev/tasks/)
+
+Will update a product when sent a JSON payload in the format:
+
+```json
+{
+  	"Description": "Wash the dog",
+	"DueDate": "2020-05-05",
+	"Completed": true,
+	"User_Id": 3
+}
+```
